@@ -1,0 +1,11 @@
+test:
+  image: ortussolutions/commandbox:3.6.0-snapshot
+  ports:
+    - "8080:8080"
+  volumes:
+    - ./test:/app
+  environment:
+    PORT: 8080
+    SSL_PORT: 8443
+    CFENGINE: adobe@11
+    cfconfig_adminPassword: admin123
